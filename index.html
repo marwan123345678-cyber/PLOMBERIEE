@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plomberie Express - Service Rapide 24/7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #0077BE;
+            --secondary: #00A8E8;
+            --accent: #00C9FF;
+            --dark: #003D5B;
+            --light: #F0F8FF;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background: var(--light);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: water 15s linear infinite;
+        }
+        
+        @keyframes water {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--light);
+            clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInScale 1s ease;
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .tagline {
+            font-size: 1.5em;
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .emergency {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background: #FF4444;
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            animation: pulse 2s infinite;
+            font-size: 1.2em;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(255, 68, 68, 0);
+            }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        section {
+            margin-bottom: 80px;
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 2px;
+        }
+        
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 119, 190, 0.1);
+        }
+        
+        .about-icon {
+            font-size: 10em;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        .about-text p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 168, 232, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 119, 190, 0.2);
+            border-color: var(--accent);
+        }
+        
+        .service-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .service-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: '💧';
+            position: absolute;
+            font-size: 20em;
+            opacity: 0.05;
+            top: -50px;
+            right: -50px;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact h2::after {
+            background: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .contact-item span:first-child {
+            font-size: 2.5em;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item span:last-child {
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--dark);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            .about {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+            
+            .about-icon {
+                font-size: 5em;
+            }
+            
+            .contact {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Plomberie Express</h1>
+        <p class="tagline">Service Rapide 24h/24 - 7j/7</p>
+        <a href="tel:0467XXXXXX" class="emergency">🚨 URGENCE 24/7</a>
+    </header>
+    
+    <div class="container">
+        <section class="about">
+            <div class="about-icon">💧</div>
+            <div class="about-text">
+                <h2>À Propos</h2>
+                <p>
+                    Entreprise de plomberie professionnelle intervenant rapidement sur toute la région. 
+                    Disponibles 24h/24 et 7j/7 pour vos urgences, nous garantissons un service de qualité 
+                    pour tous vos besoins en plomberie.
+                </p>
+                <p>
+                    Équipe d'artisans qualifiés et expérimentés, équipements modernes, devis gratuit. 
+                    Votre satisfaction est notre priorité.
+                </p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Nos Services</h2>
+            <div class="services">
+                <div class="service-card">
+                    <span class="service-icon">🚰</span>
+                    <h3>Installation Sanitaire</h3>
+                    <p>Installation complète de salles de bain, cuisines, sanitaires et équipements</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🔧</span>
+                    <h3>Dépannage Urgence</h3>
+                    <p>Intervention rapide 24/7 pour fuites, canalisations bouchées et pannes</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🚿</span>
+                    <h3>Rénovation</h3>
+                    <p>Rénovation complète de vos installations sanitaires et chauffage</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🔥</span>
+                    <h3>Chauffage</h3>
+                    <p>Installation et entretien de chaudières, radiateurs et planchers chauffants</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🌊</span>
+                    <h3>Détection de Fuites</h3>
+                    <p>Recherche et réparation de fuites avec équipement de détection moderne</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">♻️</span>
+                    <h3>Débouchage</h3>
+                    <p>Débouchage de canalisations, éviers, toilettes et égouts</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <span>04 67 XX XX XX</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>06 XX XX XX XX</span>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>contact@plomberieexpress.fr</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Juvignac et environs</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Plomberie Express - Tous droits réservés - Disponible 24h/24</p>
+    </footer>
+</body>
+</html>
