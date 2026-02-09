@@ -3,86 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaPro Paris | Dépannage Plomberie 24h/7j</title>
-    <style>
-        :root { --blue: #0056b3; --red: #d9534f; --dark: #1a1a1a; --light: #f8f9fa; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; line-height: 1.6; color: var(--dark); scroll-behavior: smooth; }
-        .top-urgency { background: var(--red); color: white; text-align: center; padding: 12px; font-weight: bold; letter-spacing: 1px; font-size: 0.9rem; }
-        header { background: white; padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--blue); }
-        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1350&q=80');
-                background-size: cover; color: white; padding: 80px 10%; text-align: center; }
-        .btn-call { display: inline-block; background: var(--red); color: white; padding: 18px 35px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 20px; font-size: 1.2rem; }
-        
-        /* Grille Tarifaire Plomberie */
-        .section { padding: 60px 10%; }
-        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .price-card { background: var(--light); padding: 30px; border-left: 5px solid var(--blue); border-radius: 5px; }
-        .price-card h3 { margin-top: 0; color: var(--blue); }
-        .price-value { font-size: 1.5rem; font-weight: bold; color: var(--red); }
-
-        footer { background: var(--dark); color: white; padding: 60px 10% 20px; text-align: center; }
-        .legal-link { color: #888; text-decoration: underline; cursor: pointer; font-size: 0.8rem; margin-top: 20px; display: block; }
-        #modal-legal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 1000; padding: 40px; }
-        .modal-box { background: white; color: #333; max-width: 600px; margin: 0 auto; padding: 30px; border-radius: 5px; position: relative; text-align: left; }
-    </style>
+    <title>PLOMBERIE EXPERT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { blue: '#0F172A', light: '#3B82F6', accent: '#F97316' } }, fontFamily: { heading: ['"Oswald"', 'sans-serif'], sans: ['"Inter"', 'sans-serif'] } } } }
+    </script>
+    <style>html{scroll-behavior:smooth}.clip-slant{clip-path:polygon(0 0,100% 0,100% 85%,0 100%)}.grad-overlay{background:linear-gradient(to right,rgba(15,23,42,.95),rgba(15,23,42,.6))}@keyframes pulse-ring{0%{transform:scale(.9);box-shadow:0 0 0 0 rgba(249,115,22,.7)}70%{transform:scale(1);box-shadow:0 0 0 15px rgba(249,115,22,0)}100%{transform:scale(.9);box-shadow:0 0 0 0 rgba(249,115,22,0)}}.anim-pulse{animation:pulse-ring 2s infinite}</style>
 </head>
-<body>
-    <div class="top-urgency">⚡ INTERVENTION D'URGENCE EN 30 MIN À PARIS & IDF ⚡</div>
-    <header>
-        <h1 style="color:var(--blue); margin:0; font-size: 1.8rem;">AquaPro 75</h1>
-        <div style="font-size: 1.2rem; font-weight: bold;">📞 01 48 00 11 22</div>
-    </header>
-
-    <div class="hero">
-        <h2>Une fuite ? Un débouchage urgent ?</h2>
-        <p>Artisans diplômés - Assurance Décennale & Devis Gratuit avant intervention</p>
-        <a href="tel:0148001122" class="btn-call">APPELER MAINTENANT</a>
-    </div>
-
-    <section class="section" id="tarifs">
-        <h2 style="text-align:center; margin-bottom: 40px;">Nos Forfaits Transparents 2026</h2>
-        <div class="price-grid">
-            <div class="price-card">
-                <h3>Déplacement + 1h Main d'œuvre</h3>
-                <p>Diagnostic complet de votre installation.</p>
-                <div class="price-value">89,00 € TTC</div>
-            </div>
-            <div class="price-card">
-                <h3>Débouchage WC / Évier</h3>
-                <p>Pompe haute pression ou furet électrique.</p>
-                <div class="price-value">119,00 € TTC</div>
-            </div>
-            <div class="price-card">
-                <h3>Remplacement Robinetterie</h3>
-                <p>Pose de votre nouveau mitigeur (hors matériel).</p>
-                <div class="price-value">145,00 € TTC</div>
-            </div>
-            <div class="price-card">
-                <h3>Recherche de Fuite</h3>
-                <p>Passage caméra thermique ou acoustique.</p>
-                <div class="price-value">180,00 € TTC</div>
-            </div>
+<body class="bg-gray-50 font-sans text-slate-800">
+    <nav class="sticky top-0 w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="bg-brand-light p-2 rounded-lg text-white group-hover:bg-brand-blue transition-colors"><i data-lucide="wrench" class="w-6 h-6"></i></div>
+                <div class="leading-tight"><span class="block font-heading font-bold text-2xl text-brand-blue">PLOMBERIE<span class="text-brand-light">PRO</span></span></div>
+            </a>
+            <div class="hidden md:flex space-x-8 font-semibold text-slate-700 text-sm uppercase"><a href="#home">Accueil</a><a href="#services">Services</a><a href="#urgences">Urgences</a></div>
+            <div class="hidden md:block"><a href="tel:0123456789" class="bg-brand-accent text-white px-6 py-3 rounded-full font-bold shadow-lg flex items-center gap-2 hover:scale-105 transition-transform"><i data-lucide="phone-call" class="w-5 h-5"></i> 01 23 45 67 89</a></div>
+            <button id="mobile-btn" class="md:hidden text-brand-blue p-2"><i data-lucide="menu" class="w-8 h-8"></i></button>
         </div>
-        <p style="text-align:center; margin-top: 30px; font-size: 0.9rem;">* Majorations de 50% après 20h00, weekends et jours fériés.</p>
+        <div id="mobile-menu" class="hidden bg-white border-t absolute w-full md:hidden shadow-xl z-40 p-6 flex flex-col gap-4 font-bold text-brand-blue"><a href="#home">Accueil</a><a href="#services">Services</a><a href="#urgences">Urgences</a></div>
+    </nav>
+
+**PARTIE 2 (Le reste du fichier - à coller juste après)**
+```html
+    <section id="home" class="relative min-h-[600px] flex items-center clip-slant bg-slate-900 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 grad-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-10 pb-20 text-white">
+            <div class="inline-flex items-center gap-2 bg-brand-accent/20 border border-brand-accent/50 rounded-full px-4 py-1 text-orange-300 text-sm font-bold mb-8"><span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span> Intervention 30 min</div>
+            <h1 class="font-heading text-5xl md:text-7xl font-bold leading-none mb-8">PLOMBIER <br/><span class="text-brand-light">DE CONFIANCE.</span></h1>
+            <div class="flex flex-col sm:flex-row gap-5"><a href="#contact" class="bg-brand-light text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-blue-600 transition-colors">Demander Devis <i data-lucide="arrow-right" class="w-5 h-5"></i></a><a href="tel:0123456789" class="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-white hover:text-brand-blue transition-colors"><i data-lucide="phone" class="w-5 h-5"></i> 01 23 45 67 89</a></div>
+        </div>
     </section>
 
-    <footer>
-        <p>AquaPro Plomberie | 45 Rue du Faubourg Saint-Honoré, 75008 Paris</p>
-        <p>Agrée Assurances - Travail soigné et garanti</p>
-        <span class="legal-link" onclick="document.getElementById('modal-legal').style.display='block'">Consulter les Mentions Légales & Honoraires</span>
-        <p style="color:#555; margin-top:40px;">&copy; 2026 AquaPro Services. Expert Plombier à Paris.</p>
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-lg"><div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="droplets" class="w-8 h-8 text-brand-light"></i></div><h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Fuites d'eau</h3><p class="text-gray-600">Recherche de fuite et réparation.</p></div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-orange-100 relative overflow-hidden"><div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">URGENCE</div><div class="bg-orange-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="wrench" class="w-8 h-8 text-brand-accent"></i></div><h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Débouchage</h3><p class="text-gray-600">WC, éviers, canalisations.</p></div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg"><div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="flame" class="w-8 h-8 text-brand-light"></i></div><h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Chauffage</h3><p class="text-gray-600">Chaudière et ballon d'eau chaude.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="urgences" class="py-24 bg-brand-light text-white relative overflow-hidden text-center">
+        <div class="relative z-10 max-w-4xl mx-auto px-6">
+            <h2 class="font-heading text-5xl md:text-7xl font-bold mb-6">UNE URGENCE ?</h2>
+            <a href="tel:0123456789" class="bg-white text-brand-blue text-3xl font-heading font-bold py-6 px-12 rounded-2xl shadow-2xl inline-flex items-center gap-4 hover:scale-105 transition-transform anim-pulse"><i data-lucide="phone-call"></i> 01 23 45 67 89</a>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brand-blue text-slate-400 py-16 text-center">
+        <p>&copy; 2025 Plomberie Pro. Paris & IDF. 01 23 45 67 89</p>
     </footer>
 
-    <div id="modal-legal">
-        <div class="modal-box">
-            <span style="position:absolute; right:20px; top:10px; cursor:pointer; font-size:2rem;" onclick="document.getElementById('modal-legal').style.display='none'">&times;</span>
-            <h3 style="color:var(--blue)">Mentions Légales - AquaPro</h3>
-            <p><strong>Identité :</strong> AquaPro Services SASU. Capital : 2 500€. Siège : 45 Rue du Faubourg St-Honoré, 75008 Paris.</p>
-            <p><strong>SIRET :</strong> 111 222 333 00044. RCS Paris. Assurance Décennale : AXA Police N°987654321.</p>
-            <p><strong>Prix :</strong> TVA 10% applicable pour les logements de plus de 2 ans, sinon 20%.</p>
-            <p><strong>Médiateur :</strong> MCP Médiation, 12 square Desnouettes, 75015 Paris.</p>
+    <script>
+        lucide.createIcons();
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); lucide.createIcons(); });
+    </script>
+</body>
+</html><!-- HERO SECTION (Bannière Principale) -->
+    <section id="home" class="relative min-h-[600px] flex items-center clip-slant bg-slate-900 overflow-hidden">
+        <!-- Image de fond -->
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Plombier">
+        
+        <!-- Filtre sombre -->
+        <div class="absolute inset-0 grad-overlay"></div>
+
+        <!-- Texte -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-10 pb-20 text-white">
+            <div class="inline-flex items-center gap-2 bg-brand-accent/20 border border-brand-accent/50 rounded-full px-4 py-1 text-orange-300 text-sm font-bold mb-8">
+                <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span> Intervention 30 min
+            </div>
+            <h1 class="font-heading text-5xl md:text-7xl font-bold leading-none mb-8">
+                PLOMBIER <br/><span class="text-brand-light">DE CONFIANCE.</span>
+            </h1>
+            <p class="text-xl text-slate-300 mb-12 max-w-2xl font-light">
+                Fuite d'eau, panne de chauffage ou rénovation de salle de bain. 
+                <strong>Devis clair, travail soigné.</strong>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5">
+                <a href="#contact" class="bg-brand-light text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-blue-600 transition-colors">
+                    Demander Devis <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="tel:0123456789" class="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-white hover:text-brand-blue transition-colors">
+                    <i data-lucide="phone" class="w-5 h-5"></i> 01 23 45 67 89
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS RAPIDES -->
+    <div class="max-w-6xl mx-auto px-6 -mt-16 relative z-20 mb-16 hidden md:block">
+        <div class="bg-white rounded-xl shadow-2xl grid grid-cols-4 divide-x divide-gray-100 p-8 border-b-4 border-brand-accent">
+            <div class="text-center"><span class="block font-heading text-3xl font-bold text-brand-blue">24/7</span><span class="text-xs text-gray-500 font-bold uppercase">Disponibilité</span></div>
+            <div class="text-center"><span class="block font-heading text-3xl font-bold text-brand-blue">15 Ans</span><span class="text-xs text-gray-500 font-bold uppercase">Expérience</span></div>
+            <div class="text-center"><span class="block font-heading text-3xl font-bold text-brand-blue">5000+</span><span class="text-xs text-gray-500 font-bold uppercase">Clients</span></div>
+            <div class="text-center"><span class="block font-heading text-3xl font-bold text-brand-blue">100%</span><span class="text-xs text-gray-500 font-bold uppercase">Devis Gratuit</span></div>
         </div>
     </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-light font-bold uppercase text-xs tracking-widest">Nos Expertises</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-blue mt-2">Dépannage & Travaux</h2>
+                <div class="h-1 w-20 bg-brand-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Carte 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="droplets" class="w-8 h-8 text-brand-light"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Fuites d'eau</h3>
+                    <p class="text-gray-600 mb-6">Recherche de fuite non-destructive et réparation immédiate sur tous types de tuyauterie.</p>
+                </div>
+
+                <!-- Carte 2 (Urgence) -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-orange-100 relative overflow-hidden hover:-translate-y-2 transition-transform duration-300">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">URGENCE</div>
+                    <div class="bg-orange-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="wrench" class="w-8 h-8 text-brand-accent"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Débouchage</h3>
+                    <p class="text-gray-600 mb-6">WC bouchés, éviers, canalisations engorgées. Intervention express haute pression.</p>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="flame" class="w-8 h-8 text-brand-light"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Chauffage</h3>
+                    <p class="text-gray-600 mb-6">Entretien de chaudière, remplacement de ballon d'eau chaude et réparation de radiateurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNIERE URGENCE -->
+    <section id="urgences" class="py-24 bg-brand-light text-white relative overflow-hidden text-center">
+        <!-- Effets fond -->
+        <div class="absolute -right-20 -top-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-6">
+            <h2 class="font-heading text-5xl md:text-7xl font-bold mb-6 drop-shadow-md">UNE URGENCE ?</h2>
+            <p class="text-xl mb-12 text-blue-50">Ne laissez pas une fuite gâcher votre journée.</p>
+            <a href="tel:0123456789" class="bg-white text-brand-blue text-2xl md:text-4xl font-heading font-bold py-6 px-12 rounded-2xl shadow-2xl inline-flex items-center gap-4 hover:scale-105 transition-transform anim-pulse">
+                <i data-lucide="phone-call" class="w-8 h-8 md:w-10 md:h-10 text-brand-accent"></i> 
+                01 23 45 67 89
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-brand-blue text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <span class="font-heading font-bold text-2xl text-white block mb-4">PLOMBERIE<span class="text-brand-light">PRO</span></span>
+                <p>Votre partenaire de confiance sur Paris & IDF depuis plus de 15 ans.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Contact</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand-accent"></i> 12 Rue de la Paix, Paris</li>
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i data-lucide="phone" class="w-4 h-4 text-brand-accent"></i> 01 23 45 67 89</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Zone</h4>
+                <p>Intervention rapide dans tout le département.</p>
+                <p class="text-green-400 mt-2 text-sm">● Techniciens disponibles</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-slate-800 text-sm">
+            &copy; 2025 Plomberie Pro. Tous droits réservés.
+        </div>
+    </footer>
+
+    <!-- BOUTON FLOTTANT MOBILE -->
+    <a href="tel:0123456789" class="md:hidden fixed bottom-6 right-6 bg-brand-accent text-white p-4 rounded-full shadow-2xl z-50 animate-bounce flex items-center justify-center border-4 border-white">
+        <i data-lucide="phone-call" class="w-8 h-8 fill-current"></i>
+    </a>
+
+    <!-- SCRIPTS JS -->
+    <script>
+        // 1. Initialiser les icônes
+        lucide.createIcons();
+
+        // 2. Gestion du Menu Mobile
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                lucide.createIcons();
+            });
+
+            // Fermer le menu au clic sur un lien
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
