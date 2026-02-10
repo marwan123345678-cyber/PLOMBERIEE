@@ -1,219 +1,321 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLOMBERIE EXPERT</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = { theme: { extend: { colors: { brand: { blue: '#0F172A', light: '#3B82F6', accent: '#F97316' } }, fontFamily: { heading: ['"Oswald"', 'sans-serif'], sans: ['"Inter"', 'sans-serif'] } } } }
-    </script>
-    <style>html{scroll-behavior:smooth}.clip-slant{clip-path:polygon(0 0,100% 0,100% 85%,0 100%)}.grad-overlay{background:linear-gradient(to right,rgba(15,23,42,.95),rgba(15,23,42,.6))}@keyframes pulse-ring{0%{transform:scale(.9);box-shadow:0 0 0 0 rgba(249,115,22,.7)}70%{transform:scale(1);box-shadow:0 0 0 15px rgba(249,115,22,0)}100%{transform:scale(.9);box-shadow:0 0 0 0 rgba(249,115,22,0)}}.anim-pulse{animation:pulse-ring 2s infinite}</style>
-</head>
-<body class="bg-gray-50 font-sans text-slate-800">
-    <nav class="sticky top-0 w-full bg-white shadow-lg z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="bg-brand-light p-2 rounded-lg text-white group-hover:bg-brand-blue transition-colors"><i data-lucide="wrench" class="w-6 h-6"></i></div>
-                <div class="leading-tight"><span class="block font-heading font-bold text-2xl text-brand-blue">PLOMBERIE<span class="text-brand-light">PRO</span></span></div>
-            </a>
-            <div class="hidden md:flex space-x-8 font-semibold text-slate-700 text-sm uppercase"><a href="#home">Accueil</a><a href="#services">Services</a><a href="#urgences">Urgences</a></div>
-            <div class="hidden md:block"><a href="tel:0123456789" class="bg-brand-accent text-white px-6 py-3 rounded-full font-bold shadow-lg flex items-center gap-2 hover:scale-105 transition-transform"><i data-lucide="phone-call" class="w-5 h-5"></i> 01 23 45 67 89</a></div>
-            <button id="mobile-btn" class="md:hidden text-brand-blue p-2"><i data-lucide="menu" class="w-8 h-8"></i></button>
-        </div>
-        <div id="mobile-menu" class="hidden bg-white border-t absolute w-full md:hidden shadow-xl z-40 p-6 flex flex-col gap-4 font-bold text-brand-blue"><a href="#home">Accueil</a><a href="#services">Services</a><a href="#urgences">Urgences</a></div>
-    </nav>
+    <title>Plomberie Expert - Dépannage 24/7</title>
+    <meta name="description" content="Plombier d'urgence à Paris et Île-de-France. Devis gratuit, intervention rapide.">
     
-    <section id="home" class="relative min-h-[600px] flex items-center clip-slant bg-slate-900 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40">
-        <div class="absolute inset-0 grad-overlay"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-10 pb-20 text-white">
-            <div class="inline-flex items-center gap-2 bg-brand-accent/20 border border-brand-accent/50 rounded-full px-4 py-1 text-orange-300 text-sm font-bold mb-8"><span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span> Intervention 30 min</div>
-            <h1 class="font-heading text-5xl md:text-7xl font-bold leading-none mb-8">PLOMBIER <br/><span class="text-brand-light">DE CONFIANCE.</span></h1>
-            <div class="flex flex-col sm:flex-row gap-5"><a href="#contact" class="bg-brand-light text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-blue-600 transition-colors">Demander Devis <i data-lucide="arrow-right" class="w-5 h-5"></i></a><a href="tel:0123456789" class="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-white hover:text-brand-blue transition-colors"><i data-lucide="phone" class="w-5 h-5"></i> 01 23 45 67 89</a></div>
-        </div>
-    </section>
-
-    <section id="services" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-lg"><div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="droplets" class="w-8 h-8 text-brand-light"></i></div><h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Fuites d'eau</h3><p class="text-gray-600">Recherche de fuite et réparation.</p></div>
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-orange-100 relative overflow-hidden"><div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">URGENCE</div><div class="bg-orange-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="wrench" class="w-8 h-8 text-brand-accent"></i></div><h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Débouchage</h3><p class="text-gray-600">WC, éviers, canalisations.</p></div>
-                <div class="bg-white p-8 rounded-3xl shadow-lg"><div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="flame" class="w-8 h-8 text-brand-light"></i></div><h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Chauffage</h3><p class="text-gray-600">Chaudière et ballon d'eau chaude.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="urgences" class="py-24 bg-brand-light text-white relative overflow-hidden text-center">
-        <div class="relative z-10 max-w-4xl mx-auto px-6">
-            <h2 class="font-heading text-5xl md:text-7xl font-bold mb-6">UNE URGENCE ?</h2>
-            <a href="tel:0123456789" class="bg-white text-brand-blue text-3xl font-heading font-bold py-6 px-12 rounded-2xl shadow-2xl inline-flex items-center gap-4 hover:scale-105 transition-transform anim-pulse"><i data-lucide="phone-call"></i> 01 23 45 67 89</a>
-        </div>
-    </section>
-
-    <footer id="contact" class="bg-brand-blue text-slate-400 py-16 text-center">
-        <p>&copy; 2025 Plomberie Pro. Paris & IDF. 01 23 45 67 89</p>
-    </footer>
-
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuration Tailwind pour les couleurs personnalisées -->
     <script>
-        lucide.createIcons();
-        const btn = document.getElementById('mobile-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); lucide.createIcons(); });
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0B0F19', // Fond très sombre (Inspiration LBC Tracker)
+                        surface: '#111827', // Fond des cartes
+                        primary: '#4f46e5', // Indigo-600
+                        secondary: '#7c3aed', // Violet-600
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
     </script>
-</body>
-</html><!-- HERO SECTION (Bannière Principale) -->
-    <section id="home" class="relative min-h-[600px] flex items-center clip-slant bg-slate-900 overflow-hidden">
-        <!-- Image de fond -->
-        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Plombier">
-        
-        <!-- Filtre sombre -->
-        <div class="absolute inset-0 grad-overlay"></div>
 
-        <!-- Texte -->
-        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-10 pb-20 text-white">
-            <div class="inline-flex items-center gap-2 bg-brand-accent/20 border border-brand-accent/50 rounded-full px-4 py-1 text-orange-300 text-sm font-bold mb-8">
-                <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span> Intervention 30 min
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icônes (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Effet de verre (Glassmorphism) */
+        .glass {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #fb923c, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-dark text-slate-300 selection:bg-indigo-500 selection:text-white antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-gradient-to-br from-indigo-600 to-violet-600 p-2 rounded-lg shadow-lg shadow-indigo-500/20">
+                        <i data-lucide="wrench" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold text-white tracking-tight">
+                        PLOMBERIE<span class="text-indigo-400">.EXPERT</span>
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-sm font-medium hover:text-white transition-colors">Services</a>
+                    <a href="#avis" class="text-sm font-medium hover:text-white transition-colors">Avis Clients</a>
+                    <a href="#garanties" class="text-sm font-medium hover:text-white transition-colors">Garanties</a>
+                    <!-- CTA Button -->
+                    <a href="tel:0123456789" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-indigo-600/20 flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        01 23 45 67 89
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
             </div>
-            <h1 class="font-heading text-5xl md:text-7xl font-bold leading-none mb-8">
-                PLOMBIER <br/><span class="text-brand-light">DE CONFIANCE.</span>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-white/5">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#services" class="block px-3 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-md">Services</a>
+                <a href="#avis" class="block px-3 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-md">Avis Clients</a>
+                <a href="tel:0123456789" class="block w-full text-center bg-indigo-600 text-white px-4 py-3 rounded-lg font-bold mt-4">
+                    Appeler maintenant
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Glow Effect -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-medium mb-8 backdrop-blur-sm">
+                <span class="flex h-2 w-2 relative mr-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                </span>
+                Disponible 24h/24 et 7j/7
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8 tracking-tight">
+                Vos travaux de plomberie,<br />
+                <span class="text-gradient">
+                    sans les mauvaises surprises.
+                </span>
             </h1>
-            <p class="text-xl text-slate-300 mb-12 max-w-2xl font-light">
-                Fuite d'eau, panne de chauffage ou rénovation de salle de bain. 
-                <strong>Devis clair, travail soigné.</strong>
+
+            <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Notre système analyse votre problème en temps réel pour vous fournir un devis précis. 
+                Intervention rapide, tarifs transparents et artisans certifiés.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white text-lg px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-indigo-600/25 flex items-center justify-center gap-2 group">
+                    Demander un devis
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                
+                <a href="tel:0123456789" class="w-full sm:w-auto bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 text-lg px-8 py-4 rounded-xl font-bold transition flex items-center justify-center gap-2">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    Urgence 01 23 45
+                </a>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="mt-12 flex flex-wrap justify-center gap-4 sm:gap-8 text-slate-500 text-sm font-medium">
+                <div class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-emerald-500"></i> Devis Gratuit</div>
+                <div class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-emerald-500"></i> Agréé Assurance</div>
+                <div class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-emerald-500"></i> Garantie 10 ans</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass p-8 rounded-2xl hover:border-indigo-500/50 transition duration-300 group">
+                    <div class="bg-white/5 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="droplet" class="w-8 h-8 text-blue-400 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Recherche de Fuite</h3>
+                    <p class="text-slate-400 leading-relaxed">Détection thermique haute précision sans casse inutile. Nous trouvons l'origine du dégât des eaux.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass p-8 rounded-2xl hover:border-indigo-500/50 transition duration-300 group">
+                    <div class="bg-white/5 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="wrench" class="w-8 h-8 text-orange-400 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Dépannage Express</h3>
+                    <p class="text-slate-400 leading-relaxed">WC bouchés, robinet cassé ou canalisation obstruée. Intervention en moins de 30 min.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass p-8 rounded-2xl hover:border-indigo-500/50 transition duration-300 group">
+                    <div class="bg-white/5 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:bg-pink-500 group-hover:scale-110 transition-all duration-300">
+                        <i data-lucide="thermometer" class="w-8 h-8 text-pink-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Chauffage & Gaz</h3>
+                    <p class="text-slate-400 leading-relaxed">Entretien, réparation et installation de chaudières toutes marques. Certification RGE.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="avis" class="py-20 border-y border-white/5 bg-[#0F1422]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                        Pourquoi nous sommes <br/>
+                        <span class="text-indigo-400">les mieux notés ?</span>
+                    </h2>
+                    <p class="text-slate-400 mb-8 text-lg">
+                        Contrairement aux plateformes classiques, nous ne sous-traitons pas à l'aveugle. Nos artisans sont salariés et experts.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 rounded-xl bg-dark border border-white/5">
+                            <div class="bg-emerald-500/10 p-2 rounded-lg mr-4">
+                                <i data-lucide="shield" class="w-5 h-5 text-emerald-400"></i>
+                            </div>
+                            <span class="text-slate-200 font-medium">Transparence totale des prix avant travaux</span>
+                        </div>
+                        <div class="flex items-center p-4 rounded-xl bg-dark border border-white/5">
+                            <div class="bg-emerald-500/10 p-2 rounded-lg mr-4">
+                                <i data-lucide="shield" class="w-5 h-5 text-emerald-400"></i>
+                            </div>
+                            <span class="text-slate-200 font-medium">Matériel professionnel de dernière génération</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card Simulation -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-pink-500 rounded-2xl blur-2xl opacity-20"></div>
+                    <div class="relative glass rounded-2xl p-8 shadow-2xl">
+                        <div class="flex items-center justify-between mb-8">
+                            <div>
+                                <p class="text-3xl font-bold text-white">4.9/5</p>
+                                <div class="flex text-orange-400 mt-1 gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-slate-400 text-sm">Basé sur</p>
+                                <p class="text-white font-bold">1,240 avis</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-black/30 p-4 rounded-xl border border-white/5">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="font-bold text-white">Sophie M.</span>
+                                    <span class="text-xs text-slate-500">Il y a 2h</span>
+                                </div>
+                                <p class="text-slate-400 text-sm">"Intervention ultra rapide. Le design du devis était clair, j'ai tout compris. Merci pour le professionnalisme."</p>
+                            </div>
+                            <div class="bg-black/30 p-4 rounded-xl border border-white/5">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="font-bold text-white">Marc D.</span>
+                                    <span class="text-xs text-slate-500">Il y a 1j</span>
+                                </div>
+                                <p class="text-slate-400 text-sm">"Plombier au top. Prix annoncé respecté à la lettre. Je recommande."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl font-bold text-white mb-6">
+                Une urgence ne prévient pas. <br />
+                <span class="text-indigo-400">Nous sommes prêts.</span>
+            </h2>
+            <p class="text-slate-400 mb-10 text-lg">
+                Ne laissez pas une fuite devenir un dégât des eaux. Laissez votre numéro, on vous rappelle dans 5 minutes.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-5">
-                <a href="#contact" class="bg-brand-light text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-blue-600 transition-colors">
-                    Demander Devis <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
-                <a href="tel:0123456789" class="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-white hover:text-brand-blue transition-colors">
-                    <i data-lucide="phone" class="w-5 h-5"></i> 01 23 45 67 89
-                </a>
+            <div class="glass p-8 rounded-3xl max-w-lg mx-auto shadow-2xl">
+                <form onsubmit="event.preventDefault(); alert('Merci ! Nous allons vous rappeler.');" class="space-y-4">
+                    <input 
+                        type="text" 
+                        placeholder="Votre numéro de téléphone" 
+                        class="w-full bg-black/50 border border-white/10 text-white rounded-xl px-4 py-4 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition placeholder-slate-500"
+                        required
+                    />
+                    <button class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-indigo-600/25 transform hover:-translate-y-1">
+                        Être rappelé gratuitement
+                    </button>
+                </form>
+                <p class="text-xs text-slate-500 mt-4">
+                    <i data-lucide="lock" class="w-3 h-3 inline mr-1"></i> Vos données sont sécurisées.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- STATS RAPIDES -->
-    <div class="max-w-6xl mx-auto px-6 -mt-16 relative z-20 mb-16 hidden md:block">
-        <div class="bg-white rounded-xl shadow-2xl grid grid-cols-4 divide-x divide-gray-100 p-8 border-b-4 border-brand-accent">
-            <div class="text-center"><span class="block font-heading text-3xl font-bold text-brand-blue">24/7</span><span class="text-xs text-gray-500 font-bold uppercase">Disponibilité</span></div>
-            <div class="text-center"><span class="block font-heading text-3xl font-bold text-brand-blue">15 Ans</span><span class="text-xs text-gray-500 font-bold uppercase">Expérience</span></div>
-            <div class="text-center"><span class="block font-heading text-3xl font-bold text-brand-blue">5000+</span><span class="text-xs text-gray-500 font-bold uppercase">Clients</span></div>
-            <div class="text-center"><span class="block font-heading text-3xl font-bold text-brand-blue">100%</span><span class="text-xs text-gray-500 font-bold uppercase">Devis Gratuit</span></div>
+    <!-- Footer -->
+    <footer class="py-10 border-t border-white/5 bg-[#0B0F19] text-center">
+        <div class="flex items-center justify-center gap-2 mb-4 opacity-50">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+            <span class="font-bold tracking-tight">PLOMBERIE.EXPERT</span>
         </div>
-    </div>
-
-    <!-- SERVICES -->
-    <section id="services" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-brand-light font-bold uppercase text-xs tracking-widest">Nos Expertises</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-blue mt-2">Dépannage & Travaux</h2>
-                <div class="h-1 w-20 bg-brand-accent mx-auto mt-6 rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Carte 1 -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform duration-300">
-                    <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="droplets" class="w-8 h-8 text-brand-light"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Fuites d'eau</h3>
-                    <p class="text-gray-600 mb-6">Recherche de fuite non-destructive et réparation immédiate sur tous types de tuyauterie.</p>
-                </div>
-
-                <!-- Carte 2 (Urgence) -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-orange-100 relative overflow-hidden hover:-translate-y-2 transition-transform duration-300">
-                    <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">URGENCE</div>
-                    <div class="bg-orange-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="wrench" class="w-8 h-8 text-brand-accent"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Débouchage</h3>
-                    <p class="text-gray-600 mb-6">WC bouchés, éviers, canalisations engorgées. Intervention express haute pression.</p>
-                </div>
-
-                <!-- Carte 3 -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform duration-300">
-                    <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="flame" class="w-8 h-8 text-brand-light"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold text-brand-blue mb-4">Chauffage</h3>
-                    <p class="text-gray-600 mb-6">Entretien de chaudière, remplacement de ballon d'eau chaude et réparation de radiateurs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BANNIERE URGENCE -->
-    <section id="urgences" class="py-24 bg-brand-light text-white relative overflow-hidden text-center">
-        <!-- Effets fond -->
-        <div class="absolute -right-20 -top-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        
-        <div class="relative z-10 max-w-4xl mx-auto px-6">
-            <h2 class="font-heading text-5xl md:text-7xl font-bold mb-6 drop-shadow-md">UNE URGENCE ?</h2>
-            <p class="text-xl mb-12 text-blue-50">Ne laissez pas une fuite gâcher votre journée.</p>
-            <a href="tel:0123456789" class="bg-white text-brand-blue text-2xl md:text-4xl font-heading font-bold py-6 px-12 rounded-2xl shadow-2xl inline-flex items-center gap-4 hover:scale-105 transition-transform anim-pulse">
-                <i data-lucide="phone-call" class="w-8 h-8 md:w-10 md:h-10 text-brand-accent"></i> 
-                01 23 45 67 89
-            </a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contact" class="bg-brand-blue text-slate-400 py-16 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center md:text-left">
-            <div>
-                <span class="font-heading font-bold text-2xl text-white block mb-4">PLOMBERIE<span class="text-brand-light">PRO</span></span>
-                <p>Votre partenaire de confiance sur Paris & IDF depuis plus de 15 ans.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Contact</h4>
-                <ul class="space-y-3">
-                    <li class="flex items-center justify-center md:justify-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand-accent"></i> 12 Rue de la Paix, Paris</li>
-                    <li class="flex items-center justify-center md:justify-start gap-2"><i data-lucide="phone" class="w-4 h-4 text-brand-accent"></i> 01 23 45 67 89</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Zone</h4>
-                <p>Intervention rapide dans tout le département.</p>
-                <p class="text-green-400 mt-2 text-sm">● Techniciens disponibles</p>
-            </div>
-        </div>
-        <div class="text-center mt-12 pt-8 border-t border-slate-800 text-sm">
-            &copy; 2025 Plomberie Pro. Tous droits réservés.
-        </div>
+        <p class="text-slate-500 text-sm">
+            &copy; 2024 Plomberie Expert. Tous droits réservés. <br>
+            Design inspiré par l'excellence.
+        </p>
     </footer>
 
-    <!-- BOUTON FLOTTANT MOBILE -->
-    <a href="tel:0123456789" class="md:hidden fixed bottom-6 right-6 bg-brand-accent text-white p-4 rounded-full shadow-2xl z-50 animate-bounce flex items-center justify-center border-4 border-white">
-        <i data-lucide="phone-call" class="w-8 h-8 fill-current"></i>
-    </a>
-
-    <!-- SCRIPTS JS -->
+    <!-- Script pour activer les icônes et le menu mobile -->
     <script>
-        // 1. Initialiser les icônes
+        // Initialiser les icônes Lucide
         lucide.createIcons();
 
-        // 2. Gestion du Menu Mobile
-        const btn = document.getElementById('mobile-btn');
+        // Gestion du menu mobile
+        const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
-        if(btn && menu) {
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                lucide.createIcons();
-            });
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
 
-            // Fermer le menu au clic sur un lien
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('hidden');
-                });
+        // Fermer le menu au clic sur un lien
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
             });
-        }
+        });
     </script>
 </body>
 </html>
